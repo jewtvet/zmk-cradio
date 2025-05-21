@@ -185,7 +185,7 @@
             #binding-cells = <0>;
             wait-ms = <5>;
             bindings = <&kp LG(N8)>;
-        };
+        }; 
 
         ruen_to_ru: ruen_to_ru {
             compatible = "zmk,behavior-macro";
