@@ -135,13 +135,6 @@
             #binding-cells = <0>;
             mods = <(MOD_LGUI)>;
         };
-
-        ruen_one_key: ruen_one_key {
-            compatible = "zmk,behavior-ruen-one-key";
-            #binding-cells = <2>;
-            to_en = <0x8070025>; // LG(N8)
-            to_ru = <0x8070026>; // LG(N9)
-        };
     };
 
     conditional_layers { compatible = "zmk,conditional-layers"; };
