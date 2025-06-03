@@ -136,12 +136,12 @@
             mods = <(MOD_LGUI)>;
         };
 
-        ruen_one_key: ruen_one_key {
-            compatible = "zmk,behavior-ruen-one-key";
-            #binding-cells = <2>;
-            to_en = <0x8070025>; // LG(N8)
-            to_ru = <0x8070026>; // LG(N9)
-        };
+        // ruen_one_key: ruen_one_key {
+        //     compatible = "zmk,behavior-ruen-one-key";
+        //     #binding-cells = <2>;
+        //     to_en = <0x8070025>; // LG(N8)
+        //     to_ru = <0x8070026>; // LG(N9)
+        // };
     };
 
     conditional_layers { compatible = "zmk,conditional-layers"; };
@@ -183,6 +183,22 @@
             bindings = <&ruen_key F24 RBKT>;
             key-positions = <2 3>;
             layers = <0>;
+        };
+    };
+
+    macros {
+        ruen_to_en: ruen_to_en {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <5>;
+            bindings = <&kp LG(N7)>;
+        }; 
+
+        ruen_to_ru: ruen_to_ru {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <5>;
+            bindings = <&kp LG(N4)>, <&kp LG(N5)>, <&kp LG(N6)>;
         };
     };
 
