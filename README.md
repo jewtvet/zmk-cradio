@@ -1,6 +1,6 @@
 # Cradio with RuEn
-- English: modified Canary
+- English: modified Canary (not yet)
 - Russian: modified Diktor
-- Shortcuts: QWERTY
+- Major shortcuts: QWERTY
 
 ![](./.github/images/cradio.png)
