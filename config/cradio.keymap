@@ -198,7 +198,7 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             wait-ms = <5>;
-            bindings = <&kp LS(N4)>, <&kp LS(N5)>, <&kp LS(N6)>;
+            bindings = <&kp LS(N4)>, <&macro_tap_time 500>, <&kp LS(N5)>, <&macro_tap_time 500>, <&kp LS(N6)>;
         };
     };
 
