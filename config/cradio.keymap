@@ -40,7 +40,7 @@
         q_morph: q_morph {
             compatible = "zmk,behavior-mod-morph";
             label = "Q_MORPH";
-            bindings = <&ruen_key Q W>, <&kp LG(Q)>;
+            bindings = <&ruen_key Q X>, <&kp LG(Q)>;
 
             #binding-cells = <0>;
             mods = <(MOD_LGUI)>;
@@ -58,7 +58,7 @@
         z_morph: z_morph {
             compatible = "zmk,behavior-mod-morph";
             label = "Z_MORPH";
-            bindings = <&ruen_key Z A>, <&kp LG(Z)>;
+            bindings = <&ruen_key Z COMMA>, <&kp LG(Z)>;
 
             #binding-cells = <0>;
             mods = <(MOD_LGUI)>;
@@ -85,7 +85,7 @@
         x_morph: x_morph {
             compatible = "zmk,behavior-mod-morph";
             label = "X_MORPH";
-            bindings = <&ruen_key X SQT>, <&kp LG(X)>;
+            bindings = <&ruen_key X A>, <&kp LG(X)>;
 
             #binding-cells = <0>;
             mods = <(MOD_LGUI)>;
@@ -94,7 +94,7 @@
         c_morph: c_morph {
             compatible = "zmk,behavior-mod-morph";
             label = "C_MORPH";
-            bindings = <&ruen_key C LEFT_BRACKET>, <&kp LG(C)>;
+            bindings = <&ruen_key C LBKT>, <&kp LG(C)>;
 
             #binding-cells = <0>;
             mods = <(MOD_LGUI)>;
@@ -130,7 +130,7 @@
         b_morph: b_morph {
             compatible = "zmk,behavior-mod-morph";
             label = "B_MORPH";
-            bindings = <&ruen_key B PERIOD>, <&kp LG(B)>;
+            bindings = <&ruen_key B V>, <&kp LG(B)>;
 
             #binding-cells = <0>;
             mods = <(MOD_LGUI)>;
@@ -141,18 +141,6 @@
 
     combos {
         compatible = "zmk,combos";
-
-        tab {
-            bindings = <&kp TAB>;
-            key-positions = <11 12 13>;
-            layers = <0 4>;
-        };
-
-        enter {
-            bindings = <&kp ENTER>;
-            key-positions = <16 17 18>;
-            layers = <0 4>;
-        };
 
         tg4 {
             bindings = <&tog 4>;
@@ -166,15 +154,39 @@
             layers = <0 1>;
         };
 
-        DPtoIE {
-            bindings = <&ruen_key F24 O>;
+        ZH {
+            bindings = <&ruen_key F24 SEMI>;
+            key-positions = <7 8>;
+            layers = <0>;
+        };
+
+        YU {
+            bindings = <&ruen_key F24 DOT>;
             key-positions = <12 13>;
             layers = <0>;
         };
 
-        OAtoSHCH {
-            bindings = <&ruen_key F24 RBKT>;
+        IE {
+            bindings = <&ruen_key F24 SQT>;
+            key-positions = <22 23>;
+            layers = <0>;
+        };
+
+        TS {
+            bindings = <&ruen_key F24 W>;
+            key-positions = <1 2>;
+            layers = <0>;
+        };
+
+        SHCH {
+            bindings = <&ruen_key F24 O>;
             key-positions = <2 3>;
+            layers = <0>;
+        };
+
+        HARD {
+            bindings = <&ruen_key F24 RBKT>;
+            key-positions = <6 7>;
             layers = <0>;
         };
     };
@@ -198,27 +210,27 @@
 
         Let {
             bindings = <
-&q_morph  &w_morph  &ruen_key E Z  &r_morph      &ruen_key T I  &ruen_key Y P      &ruen_key U D       &ruen_key I R      &ruen_key O L  &ruen_key LS(MINUS) SEMICOLON
-&a_morph  &s_morph  &ruen_key D J  &f_morph      &ruen_key G E  &ruen_key H K      &ruen_key J Y       &ruen_key K N      &ruen_key L C  &ruen_key P H
-&z_morph  &x_morph  &c_morph       &v_morph      &b_morph       &ruen_key N COMMA  &ruen_key PERIOD V  &ruen_key COMMA G  &ruen_key M U  &ruen_key LS(SLASH) X
-                                   &lt 1 DELETE  &kp LSHIFT     &kp SPACE          &bspc_morph
+&none     &w_morph  &ruen_key E Z  &r_morph      &ruen_key T I  &ruen_key Y P  &ruen_key U D  &ruen_key I R  &ruen_key O L  &kp LS(MINUS)
+&a_morph  &s_morph  &ruen_key D J  &f_morph      &ruen_key G E  &ruen_key H K  &ruen_key J Y  &ruen_key K N  &ruen_key L C  &ruen_key P H
+&z_morph  &x_morph  &c_morph       &v_morph      &kp TAB        &kp ENTER      &b_morph       &ruen_key N G  &ruen_key M U  &q_morph
+                                   &lt 1 DELETE  &kp LSHIFT     &kp SPACE      &bspc_morph
             >;
         };
 
         Num {
             bindings = <
-&none   &ruen_key LS(N5) LS(N4)  &kp SLASH  &ruen_one_key 1 LS(N8)  &kp ESCAPE      &kp LA(SPACE)  &kp LS(N9)               &kp EQUAL               &kp LS(N0)             &kp LS(MINUS)
-&kp N1  &kp N2                   &kp N3     &kp N4                  &kp N5          &kp N6         &kp N7                   &kp N8                  &kp N9                 &kp N0
-&none   &ruen_one_key 1 LS(N4)   &kp MINUS  &kp LS(EQUAL)           &ruen_switch 0  &none          &ruen_key PERIOD LS(N7)  &ruen_key COMMA LS(N6)  &ruen_one_key 0 LA(H)  &none
+&none   &ruen_key LS(N5) LS(N4)  &kp SLASH  &ruen_one_key 1 LS(N8)  &kp ESCAPE      &kp LA(SPACE)  &ruen_one_key 1 LS(COMMA)  &kp EQUAL               &ruen_one_key 1 LS(PERIOD)  &kp LS(MINUS)
+&kp N1  &kp N2                   &kp N3     &kp N4                  &kp N5          &kp N6         &kp N7                     &kp N8                  &kp N9                      &kp N0
+&none   &ruen_one_key 1 LS(N4)   &kp MINUS  &kp LS(EQUAL)           &ruen_switch 0  &none          &ruen_key PERIOD LS(N7)    &ruen_key COMMA LS(N6)  &ruen_one_key 0 LA(H)       &none
                                             &trans                  &kp LEFT_SHIFT  &kp SPACE      &lt 3 BACKSPACE
             >;
         };
 
         Sym {
             bindings = <
-&none                   &ruen_one_key 1 LS(RIGHT_BRACKET)  &ruen_one_key 1 LS(N3)          &ruen_one_key 1 LS(LEFT_BRACKET)  &ruen_one_key 1 BACKSLASH  &ruen_one_key 1 GRAVE   &ruen_one_key 1 LS(COMMA)  &ruen_one_key 1 LS(BACKSLASH)  &ruen_one_key 1 LS(PERIOD)  &kp LS(MINUS)
-&ruen_one_key 1 LS(N7)  &kp LS(N1)                         &ruen_key LS(SEMICOLON) LS(N5)  &ruen_key LS(SQT) LS(N2)          &ruen_one_key 1 SQT        &ruen_one_key 1 LS(N2)  &sm LEFT_GUI               &sm LEFT_ALT                   &sm LEFT_SHIFT              &sm LCTRL
-&none                   &ruen_key RIGHT_BRACKET GRAVE      &ruen_key SEMICOLON LS(N8)      &ruen_key LEFT_BRACKET LS(GRAVE)  &none                      &ruen_switch 1          &ruen_key PERIOD LS(N7)    &ruen_key COMMA LS(N6)         &ruen_one_key 1 LS(N6)      &kp LS(SLASH)
+&none                   &ruen_one_key 1 LS(RIGHT_BRACKET)  &ruen_one_key 1 LS(N3)          &ruen_one_key 1 LS(LEFT_BRACKET)  &ruen_one_key 1 BACKSLASH  &ruen_one_key 1 GRAVE   &kp LS(N9)               &ruen_one_key 1 LS(BACKSLASH)  &kp LS(N0)              &kp LS(MINUS)
+&ruen_one_key 1 LS(N7)  &kp LS(N1)                         &ruen_key LS(SEMICOLON) LS(N5)  &ruen_key LS(SQT) LS(N2)          &ruen_one_key 1 SQT        &ruen_one_key 1 LS(N2)  &sm LEFT_GUI             &sm LEFT_ALT                   &sm LEFT_SHIFT          &sm LCTRL
+&none                   &ruen_key RIGHT_BRACKET GRAVE      &ruen_key SEMICOLON LS(N8)      &ruen_key LEFT_BRACKET LS(GRAVE)  &none                      &ruen_switch 1          &ruen_key PERIOD LS(N7)  &ruen_key COMMA LS(N6)         &ruen_one_key 1 LS(N6)  &kp LS(SLASH)
                                                                                            &lt 3 DELETE                      &kp LEFT_SHIFT             &kp SPACE               &trans
             >;
         };
