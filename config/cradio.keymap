@@ -162,25 +162,25 @@
 
         YU {
             bindings = <&ruen_key F24 DOT>;
-            key-positions = <12 13>;
+            key-positions = <22 23>;
             layers = <0>;
         };
 
         IE {
             bindings = <&ruen_key F24 SQT>;
-            key-positions = <22 23>;
+            key-positions = <21 22>;
             layers = <0>;
         };
 
         TS {
             bindings = <&ruen_key F24 W>;
-            key-positions = <21 22>;
+            key-positions = <27 28>;
             layers = <0>;
         };
 
-        SHCH {
-            bindings = <&ruen_key F24 O>;
-            key-positions = <2 3>;
+        HARD {
+            bindings = <&ruen_key F24 RBKT>;
+            key-positions = <28 29>;
             layers = <0>;
         };
     };
@@ -204,7 +204,7 @@
 
         Let {
             bindings = <
-&kp ESCAPE  &w_morph  &ruen_key E Z  &r_morph      &ruen_key T I  &ruen_key Y P  &ruen_key U D  &ruen_key I R  &ruen_key O L  &ruen_key LS(MINUS) RBKT
+&kp ESCAPE  &w_morph  &ruen_key E Z  &r_morph      &ruen_key T I  &ruen_key Y P  &ruen_key U D  &ruen_key I R  &ruen_key O L  &ruen_key LS(MINUS) O
 &a_morph    &s_morph  &ruen_key D J  &f_morph      &ruen_key G E  &ruen_key H K  &ruen_key J Y  &ruen_key K N  &ruen_key L C  &ruen_key P H
 &z_morph    &x_morph  &c_morph       &v_morph      &kp TAB        &kp ENTER      &b_morph       &ruen_key N G  &ruen_key M U  &q_morph
                                      &lt 1 DELETE  &kp LSHIFT     &kp SPACE      &bspc_morph
